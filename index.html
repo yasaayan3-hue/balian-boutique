@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Balian Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  (function() {
+    emailjs.init("jl5kZhVwGrYsVE67S"); // 🔑 Your Public Key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_9u0x8vb", "template_cq6np9i", this)
+      .then(function() {
+        document.getElementById("response-message").innerText = "✅ Message sent successfully!";
+      }, function(error) {
+        document.getElementById("response-message").innerText = "❌ Failed to send message. Try again later.";
+        console.log("Error:", error);
+      });
+  });
+</script>
+
+<body>
+  <!-- Header -->
+  <header class="navbar">
+    <h1 class="logo">Balian <span>Boutique</span></h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#ready">Ready Work</a>
+      <a href="#feedback">Feedback</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Crafting Perfection in Every Stitch</h2>
+      <p>Professional tailoring for every occasion — elegance, precision & quality.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>
+      Welcome to <strong>Balian Boutique</strong> — we believe every outfit should tell a story of elegance and confidence. With a passion for precision tailoring, premium fabrics, and modern design, we craft bespoke pieces that perfectly blend style, comfort, and individuality. From timeless classics to contemporary trends, each creation reflects our commitment to quality and detail — ensuring that every client not only looks exceptional but feels truly unforgettable.
+
+
+    </p>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="gallery">
+    <h2>New fashion styles For Men</style></h2>
+    <div class="gallery-grid">
+      <img src="https://i.ibb.co/35Nywqqf/Generated-Image-October-22-2025-7-15-AM.png" alt="Work 1">
+      <img src="https://i.ibb.co/DHMTcmn4/Generated-Image-October-22-2025-7-27-AM.png" alt="Work 2">
+      <img src="https://i.ibb.co/dJKd586B/Generated-Image-October-22-2025-7-12-AM.png" alt="Work 3">
+      <img src="https://i.ibb.co/Rkn49PDf/Generated-Image-October-22-2025-7-39-AM.png" alt="Work 4">
+      <img src="https://i.ibb.co/60KMKNfw/Annotation-2025-10-23-023049.png" alt="Work 5">
+      <img src="https://i.ibb.co/1GKh2sCv/Annotation-2025-10-23-023647.png" alt="Work 6">
+      <img src="https://i.ibb.co/RTTWcnKG/Annotation-2025-10-23-024035.png" alt="Work 7">
+      <img src="https://i.ibb.co/C31CzPRg/Annotation-2025-10-23-024704.png" alt="Work 8">
+      <img src="https://i.ibb.co/mYN4p25/47ced0df948cfd24a21042e1f22f79ab.jpg" alt="Work 9">
+      <img src="https://i.ibb.co/Cps2pBp2/612pbq-LDd-BL-AC-UY1000.jpg" alt="Work 10">
+      <img src="https://i.ibb.co/tPmC476Z/634e478bc317cc37d509ada9-np-men-39-s-asymmetric-inclined-placket.jpg" alt="Work 11">
+      <img src="https://i.ibb.co/JWJ6Htqz/f57bb7c042746aa6a0b012316eab176b.jpg" alt="Work 12">
+    </div>
+  </section>
+
+  <!-- Category Section -->
+   <!-- Category + Feedback Layout -->
+<section class="main-sections">
+  
+  <!-- Category Section -->
+  <div class="category">
+    <h2>Our Stitching Categories</h2>
+    <div class="category-grid">
+      <div class="category-card">
+        <img src="https://i.ibb.co/93VV0zTp/dejiandkola-africa-1712608765-3341927002288432016-30014923707.jpg" alt="Shalwar Kameez">
+        <h3>Shalwar Kameez</h3>
+        <p>Perfectly tailored traditional wear for men and women, designed with comfort and elegance.</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://i.ibb.co/svv1K6bB/61drtv-WTl8-L-SX679.jpg" alt="Shirt Pant">
+        <h3>Shirt - Pant</h3>
+        <p>Premium stitched shirts that define confidence and modern craftsmanship.</p>
+      </div>
+
+      <div class="category-card">
+        <img src="https://i.ibb.co/TBcyTV0d/Tailor-Singapore-Cover-Image-Opt-2.jpg" alt="Coat Pant">
+        <h3>Coat Pant</h3>
+        <p>Classic and formal suits tailored to perfection for business and events.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Feedback Section -->
+  <div class="feedback-wrapper">
+    <section id="feedback" class="feedback">
+      <h2>Client Feedback</h2>
+      <form id="feedbackForm">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <textarea id="feedbackText" placeholder="Write your feedback..." required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+      <div id="feedbackList"></div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+  <h2>Contact Us</h2>
+
+  <div class="contact-container">
+    <!-- Left Side Info -->
+    <div class="contact-info">
+      <h3>Get in Touch</h3>
+      <p><strong>Address:</strong> 123 Fashion Street, Lahore, Pakistan</p>
+      <p><strong>Phone:</strong> +92 300 1234567</p>
+      <p><strong>Email:</strong> yasaayan3@gmail.com</p>
+      <p>We’re here to bring your dream outfit to life — contact us for custom stitching or design consultations.</p>
+    </div>
+
+    <!-- Right Side Form -->
+    <div class="contact-form">
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <p id="response-message"></p>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Balian Boutique | Designed with ❤️</p>
+  </footer>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("jl5kZhVwGrYsVE67S"); // 🔑 Your Public Key
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm("service_9u0x8vb", "template_cq6np9i", this)
+      .then(function() {
+        document.getElementById("response-message").innerText = "✅ Message sent successfully!";
+      }, function(error) {
+        document.getElementById("response-message").innerText = "❌ Failed to send message. Try again later.";
+        console.error("Error:", error);
+      });
+  });
+</script>
+
+  <script src="script.js"></script>
+</body>
+</html>

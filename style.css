@@ -1,0 +1,396 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #dddddd;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: #ffe59d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 10;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: goldenrod;
+}
+
+.logo span {
+  color: #333;
+}
+
+.navbar nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: goldenrod;
+}
+
+/* Hero */
+.hero {
+  height: 90vh;
+  background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
+              url('https://via.placeholder.com/1200x800?text=Balian+Boutique+Banner') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #333;
+  padding: 20px;
+}
+
+.hero h2 {
+  font-size: 2.2rem;
+  color: goldenrod;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1rem;
+}
+
+/* Sections */
+section {
+  padding: 80px 10%;
+  text-align: center;
+}
+
+h2 {
+  color: goldenrod;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+/* Gallery */
+.gallery-grid, .ready-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.gallery-grid img, .ready-grid img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.gallery-grid img:hover, .ready-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Feedback */
+.feedback form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.feedback input, .feedback textarea {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.feedback button {
+  background: goldenrod;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback button:hover {
+  background: #d4a017;
+}
+
+/* ---------------- CONTACT SECTION (Improved Layout) ---------------- */
+.contact-section {
+  padding: 80px 10%;
+  background: #fffaf0;
+  color: #2b2b2b;
+  font-family: "Poppins", sans-serif;
+}
+
+.contact-section h2 {
+  text-align: center;
+  color: #a77b06;
+  font-size: 2.4rem;
+  margin-bottom: 60px;
+  letter-spacing: 1px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info h3 {
+  font-size: 1.8rem;
+  color: #a77b06;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.contact-form {
+  flex: 1;
+  min-width: 300px;
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #a77b06;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  background: #a77b06;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #cba135;
+  transform: translateY(-2px);
+}
+
+#response-message {
+  margin-top: 12px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+}
+
+
+/* Feedback Section */
+.feedback {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.feedback h2 {
+  color: #d4af37;
+  font-size: 28px;
+  margin-bottom: 25px;
+}
+
+.feedback form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 40px;
+}
+
+.feedback input,
+.feedback textarea {
+  width: 60%;
+  max-width: 600px;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.feedback button {
+  background-color: #d4af37;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 30px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.feedback button:hover {
+  background-color: #b6932f;
+}
+
+/* Feedback cards */
+.feedback-card {
+  width: 60%;
+  margin: 15px auto;
+  background: #fafafa;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.feedback-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #d4af37;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.feedback-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.feedback-date {
+  color: #888;
+  font-size: 14px;
+}
+
+.feedback-text {
+  color: #444;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.feedback-actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.feedback-actions button {
+  background: none;
+  border: none;
+  color: #d88c29;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Category Section */
+.category {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #ffe59d;
+}
+
+.category h2 {
+  font-size: 2rem;
+  color: #d88c29;
+  margin-bottom: 40px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  justify-content: center;
+}
+
+.category-card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  max-width: 300px;
+}
+
+.category-card:hover {
+  transform: translateY(-8px);
+}
+
+.category-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.category-card h3 {
+  margin-top: 15px;
+  color: #d88c29;
+  font-size: 1.2rem;
+}
+
+.category-card p {
+  font-size: 0.9rem;
+  color: #000000;
+  padding: 0 15px 20px;
+}
