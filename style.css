@@ -394,3 +394,35 @@ h2 {
   color: #000000;
   padding: 0 15px 20px;
 }
+
+.hero {
+  background-image: url('https://i.ibb.co/ZptXTvJY/Annotation-2025-10-24-071931.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh; /* full screen height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* text color */
+  text-align: center;
+  position: relative;
+}
+
+/* optional overlay (agar dark effect chahiye ho) */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+}
+
